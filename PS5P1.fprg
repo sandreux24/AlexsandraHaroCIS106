@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-22 07:34:27 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MDY6NDM6MzMgUE07MjkzMQ=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MDc6MzQ6MjcgUE07MTszMDQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="oddsend" type="Integer" array="False" size=""/>
+            <declare name="odds" type="Integer" array="False" size=""/>
+            <assign variable="start" expression="1"/>
+            <assign variable="oddsend" expression="25"/>
+            <assign variable="odds" expression="start + 2"/>
+            <output expression="start" newline="True"/>
+            <while expression="odds &lt;= 25">
+                <output expression="odds" newline="True"/>
+                <assign variable="odds" expression="odds + 2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
