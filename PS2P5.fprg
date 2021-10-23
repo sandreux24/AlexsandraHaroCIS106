@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-22 10:23:27 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MTA6MTQ6MjQgUE07MjkyNA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MTA6MjM6MjcgUE07MTszMDM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="percent" type="Real" array="False" size=""/>
+            <declare name="discamount" type="Real" array="False" size=""/>
+            <declare name="discprice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the price of the item: &quot;" newline="True"/>
+            <input variable="price"/>
+            <output expression="&quot;Enter the percent discounted: &quot;" newline="True"/>
+            <input variable="discount"/>
+            <assign variable="percent" expression="discount / 100"/>
+            <assign variable="discamount" expression="price * percent"/>
+            <assign variable="discprice" expression="price - discamount"/>
+            <output expression="&quot;Discount amount: &quot; &amp; discamount" newline="True"/>
+            <output expression="&quot;Discounted price: &quot; &amp; discprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

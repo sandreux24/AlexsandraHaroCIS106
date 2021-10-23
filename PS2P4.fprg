@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-22 10:14:18 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MTA6MDc6NDAgUE07MjkyNA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MTA6MTQ6MTggUE07MTszMDM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credits" type="Real" array="False" size=""/>
+            <declare name="labfee" type="Real" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name: &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter credits taken: &quot;" newline="True"/>
+            <input variable="credits"/>
+            <assign variable="labfee" expression="100"/>
+            <assign variable="tuition" expression="(credits * 250) + labfee"/>
+            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+            <output expression="&quot;Tuition:$ &quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
