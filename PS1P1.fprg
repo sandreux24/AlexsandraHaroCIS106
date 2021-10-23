@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-22 09:19:30 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MDk6MTQ6MDYgUE07MjkzMg=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjI7MDk6MTk6MzAgUE07MTszMDQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Real" array="False" size=""/>
+            <declare name="N2" type="Real" array="False" size=""/>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <declare name="product" type="Real" array="False" size=""/>
+            <declare name="difference" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter number: &quot;" newline="True"/>
+            <input variable="N1"/>
+            <output expression="&quot;Please enter another number: &quot;" newline="True"/>
+            <input variable="N2"/>
+            <assign variable="sum" expression="N1 + N2"/>
+            <assign variable="product" expression="N1 * N2"/>
+            <assign variable="difference" expression="N1 - N2"/>
+            <output expression="&quot;Sum: &quot; &amp;sum" newline="True"/>
+            <output expression="&quot;Product: &quot; &amp; product" newline="True"/>
+            <output expression="&quot;Difference: &quot; &amp; difference" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
