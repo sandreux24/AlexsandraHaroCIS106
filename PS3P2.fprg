@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-14 11:28:12 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMTQ7MTA6NDk6NDAgUE07MjkzMw=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMTQ7MTE6Mjg6MTIgUE07MTszMDM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="UnitPriceA" type="Integer" array="False" size=""/>
+            <declare name="UnitPriceB" type="Integer" array="False" size=""/>
+            <declare name="ItemA" type="String" array="False" size=""/>
+            <assign variable="ItemA" expression="&quot;A&quot;"/>
+            <declare name="ItemB" type="String" array="False" size=""/>
+            <assign variable="ItemB" expression="&quot;B&quot;"/>
+            <declare name="PriceperUnit" type="Integer" array="False" size=""/>
+            <declare name="ExtentedPrice" type="Integer" array="False" size=""/>
+            <assign variable="UnitPriceA" expression="10"/>
+            <assign variable="UnitPriceB" expression="20"/>
+            <output expression="&quot;Enter Quantity Ordered: &quot;" newline="True"/>
+            <input variable="Quantity"/>
+            <output expression="&quot;What is the price per unit: &quot;" newline="True"/>
+            <input variable="PriceperUnit"/>
+            <if expression="PriceperUnit = 10">
+                <then>
+                    <assign variable="ExtentedPrice" expression="UnitPriceA * Quantity"/>
+                    <output expression="&quot;Item choosen: &quot; &amp; ItemA" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="ExtentedPrice" expression="UnitPriceB * Quantity"/>
+                    <output expression="&quot;Item choosen: &quot; &amp; ItemB" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Extented Price:  $&quot; &amp; ExtentedPrice" newline="True"/>
+        </body>
+    </function>
+    <function name="Item" type="Integer" variable="ITEM">
+        <parameters>
+            <parameter name="A" type="Integer" array="False"/>
+            <parameter name="B" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ITEM" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>

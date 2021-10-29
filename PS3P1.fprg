@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-24 09:55:40 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMTQ7MTE6MzE6NDQgUE07MjkyOQ=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjQ7MDk6NTU6NDAgUE07MjszMDQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Integer" array="False" size=""/>
+            <declare name="Over1000UnitPrice" type="Real" array="False" size=""/>
+            <declare name="Under1000UnitPrice" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <assign variable="Over1000UnitPrice" expression="3"/>
+            <assign variable="Under1000UnitPrice" expression="5"/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter quantity of items: &quot;" newline="True"/>
+            <input variable="Quantity"/>
+            <if expression="Quantity &gt;= 1000">
+                <then>
+                    <assign variable="ExtendedPrice" expression="Over1000UnitPrice * Quantity"/>
+                    <output expression="&quot;Extended price: $&quot; &amp; ExtendedPrice" newline="True"/>
+                    <output expression="&quot;Unit Price: $&quot; &amp; Over1000UnitPrice" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="ExtendedPrice" expression="Under1000UnitPrice * Quantity"/>
+                    <output expression="&quot;Extended price: $&quot; &amp; ExtendedPrice" newline="True"/>
+                    <output expression="&quot;Unit Price: $&quot; &amp; Under1000UnitPrice" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Quantity of Items ordered: &quot; &amp; Quantity" newline="True"/>
+            <assign variable="Tax" expression="ExtendedPrice * 0.07"/>
+            <output expression="&quot;Tax is: $&quot; &amp; Tax" newline="True"/>
+            <assign variable="Total" expression="ExtendedPrice + Tax"/>
+            <output expression="&quot;Total is: $&quot; &amp; Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

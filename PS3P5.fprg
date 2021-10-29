@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-25 01:15:02 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MTI6MzQ6MzMgUE07MjkzMw=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MDE6MTU6MDIgUE07MjszMDM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="numberofdependents" type="Real" array="False" size=""/>
+            <declare name="grossincome" type="Real" array="False" size=""/>
+            <declare name="adjustedgrossincome" type="Real" array="False" size=""/>
+            <declare name="dependents" type="Real" array="False" size=""/>
+            <declare name="incometaxrate" type="Real" array="False" size=""/>
+            <declare name="overtaxrate" type="Real" array="False" size=""/>
+            <declare name="undertaxrate" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name: &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter number of dependents: &quot;" newline="True"/>
+            <input variable="numberofdependents"/>
+            <output expression="&quot;Enter gross income: $&quot;" newline="True"/>
+            <input variable="grossincome"/>
+            <assign variable="dependents" expression="numberofdependents * 12000"/>
+            <assign variable="adjustedgrossincome" expression="grossincome - dependents"/>
+            <if expression="adjustedgrossincome &gt; 50000">
+                <then>
+                    <assign variable="overtaxrate" expression="adjustedgrossincome * .2"/>
+                    <if expression="overtaxrate &lt; 0">
+                        <then>
+                            <assign variable="incometaxrate" expression="100"/>
+                            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+                            <output expression="&quot;Gross income: $&quot; &amp; grossincome" newline="True"/>
+                            <output expression="&quot;Number of dependents: &quot; &amp; numberofdependents" newline="True"/>
+                            <output expression="&quot;Adjusted gross income: $&quot; &amp; adjustedgrossincome" newline="True"/>
+                            <output expression="&quot;Income tax: $&quot; &amp; incometaxrate" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+                            <output expression="&quot;Gross income: $&quot; &amp; grossincome" newline="True"/>
+                            <output expression="&quot;Number of dependents: &quot; &amp; numberofdependents" newline="True"/>
+                            <output expression="&quot;Adjusted gross income: $&quot; &amp; adjustedgrossincome" newline="True"/>
+                            <output expression="&quot;Income tax: $&quot; &amp; overtaxrate" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="undertaxrate" expression="adjustedgrossincome * .1"/>
+                    <if expression="undertaxrate &lt; 0">
+                        <then>
+                            <assign variable="incometaxrate" expression="100"/>
+                            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+                            <output expression="&quot;Gross income: $&quot; &amp; grossincome" newline="True"/>
+                            <output expression="&quot;Number of dependents: &quot; &amp; numberofdependents" newline="True"/>
+                            <output expression="&quot;Adjusted gross income: $&quot; &amp; adjustedgrossincome" newline="True"/>
+                            <output expression="&quot;Income tax: $&quot; &amp; incometaxrate" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+                            <output expression="&quot;Gross income: $&quot; &amp; grossincome" newline="True"/>
+                            <output expression="&quot;Number of dependents: &quot; &amp; numberofdependents" newline="True"/>
+                            <output expression="&quot;Adjusted gross income: $&quot; &amp; adjustedgrossincome" newline="True"/>
+                            <output expression="&quot;Income tax: $&quot; &amp; undertaxrate" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

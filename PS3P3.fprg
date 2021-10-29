@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-25 12:04:56 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MTE6NDM6MzQgQU07MjkxOA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MTI6MDQ6NTYgUE07MTszMDQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numberofbooks" type="Real" array="False" size=""/>
+            <declare name="costperbook" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="totalwithshipping" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter number of books: &quot;" newline="True"/>
+            <input variable="numberofbooks"/>
+            <output expression="&quot;Enter Cost per book: &quot;" newline="True"/>
+            <input variable="costperbook"/>
+            <assign variable="total" expression="numberofbooks * costperbook"/>
+            <output expression="&quot;Amount due: $&quot; &amp; total" newline="True"/>
+            <if expression="total &gt; 50">
+                <then>
+                    <output expression="&quot;Free shipping charge&quot;" newline="True"/>
+                    <output expression="&quot;Total amount due: $&quot; &amp; total" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;shipping charge will be $25&quot;" newline="True"/>
+                    <assign variable="totalwithshipping" expression="total + 25.00"/>
+                    <output expression="&quot;Total amount due: $&quot; &amp; totalwithshipping" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

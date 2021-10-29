@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 08:12:53 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjg7MDc6MjQ6MTggUE07Mjk0MA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMTAtMjg7MDg6MTI6NTMgUE07MTszMDQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, nfib" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the amount of variables displayed: &quot;" newline="True"/>
+            <input variable="nfib"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="nfib" expression="0"/>
+            <while expression="nfib &lt;=10000">
+                <assign variable="nfib" expression="a + b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="nfib"/>
+                <output expression="nfib" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

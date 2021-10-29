@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-25 12:31:45 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MTI6MDk6MjcgUE07MjkzOA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDMtMjU7MTI6MzE6NDUgUE07MTszMDQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nameofappliance" type="String" array="False" size=""/>
+            <declare name="costofappliance" type="Real" array="False" size=""/>
+            <declare name="over1000" type="Real" array="False" size=""/>
+            <declare name="under1000" type="Real" array="False" size=""/>
+            <declare name="totalover1000" type="Real" array="False" size=""/>
+            <declare name="totalunder1000" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter name of appliance: &quot;" newline="True"/>
+            <input variable="nameofappliance"/>
+            <output expression="&quot;Enter the cost of the appliance: $&quot;" newline="True"/>
+            <input variable="costofappliance"/>
+            <if expression="costofappliance &gt; 1000">
+                <then>
+                    <assign variable="over1000" expression="costofappliance * .1"/>
+                    <assign variable="totalover1000" expression="costofappliance + over1000"/>
+                    <output expression="&quot;Name of appliance: &quot; &amp; nameofappliance" newline="True"/>
+                    <output expression="&quot;Cost of appliance: $&quot; &amp; costofappliance" newline="True"/>
+                    <output expression="&quot;Cost of warrantee: $&quot; &amp; over1000" newline="True"/>
+                    <output expression="&quot;Total amount due: $&quot; &amp; totalover1000" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="under1000" expression="costofappliance * .05"/>
+                    <assign variable="totalunder1000" expression="costofappliance + under1000"/>
+                    <output expression="&quot;Name of appliance: &quot; &amp; nameofappliance" newline="True"/>
+                    <output expression="&quot;Cost of appliance: $&quot; &amp; costofappliance" newline="True"/>
+                    <output expression="&quot;Cost of warrantee: $&quot; &amp; under1000" newline="True"/>
+                    <output expression="&quot;Total amount due: $&quot; &amp; totalunder1000" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
