@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-04-30 03:58:25 AM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMzA7MDM6MzM6MzMgQU07MjkxNA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMzA7MDM6NTg6MjUgQU07MTszMDMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="credits" type="Real" array="False" size=""/>
+            <declare name="districtcode" type="String" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <declare name="percredit" type="Real" array="False" size=""/>
+            <output expression="&quot;enter name:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;enter amount of credits: &quot;" newline="True"/>
+            <input variable="credits"/>
+            <output expression="&quot;enter district code:&quot;" newline="True"/>
+            <input variable="districtcode"/>
+            <if expression="districtcode = &quot;I&quot;">
+                <then>
+                    <assign variable="percredit" expression="250"/>
+                </then>
+                <else>
+                    <assign variable="percredit" expression="550"/>
+                </else>
+            </if>
+            <assign variable="tuition" expression="credits * percredit"/>
+            <output expression="&quot;Students name: &quot; &amp;name" newline="True"/>
+            <output expression="&quot;Tuition owed: &quot; &amp;tuition" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

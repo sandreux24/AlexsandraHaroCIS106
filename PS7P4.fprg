@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-04-30 03:48:28 AM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMzA7MDE6MzA6MzggQU07MjkxNA=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMzA7MDM6NDg6MjggQU07OTszMDQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <declare name="hoursworked" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="L" type="String" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="J" type="String" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="ratepay" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name: &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter hours worked: &quot;" newline="True"/>
+            <input variable="hoursworked"/>
+            <if expression="hoursworked &gt; 40">
+                <then>
+                    <assign variable="hoursworked" expression="((hoursworked - 40) * 1.5) + 40"/>
+                </then>
+                <else>
+                    <assign variable="hoursworked" expression="hoursworked"/>
+                </else>
+            </if>
+            <output expression="&quot;Enter job code: &quot;" newline="True"/>
+            <input variable="code"/>
+            <if expression="code = &quot;L&quot;">
+                <then>
+                    <assign variable="ratepay" expression="25"/>
+                </then>
+                <else>
+                    <if expression="code = &quot;A&quot;">
+                        <then>
+                            <assign variable="ratepay" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="code = &quot;J&quot;">
+                                <then>
+                                    <assign variable="ratepay" expression="50"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="grosspay" expression="ratepay * hoursworked"/>
+            <output expression="&quot;Last name:&quot; &amp;lastname" newline="True"/>
+            <output expression="&quot;Gross pay:$ &quot; &amp;grosspay" newline="True"/>
+        </body>
+    </function>
+    <function name="gross" type="Real" variable="grosspay">
+        <parameters/>
+        <body>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="hoursworked" type="Real" array="False" size=""/>
+            <call expression="rate"/>
+            <assign variable="grosspay" expression="rate * hoursworked"/>
+        </body>
+    </function>
+    <function name="rate" type="Real" variable="rate">
+        <parameters/>
+        <body>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <output expression="&quot;Enter job code: &quot;" newline="True"/>
+            <input variable="code"/>
+            <if expression="code = &quot;L&quot;">
+                <then>
+                    <assign variable="rate" expression="25"/>
+                </then>
+                <else>
+                    <if expression="code = &quot;A&quot;">
+                        <then>
+                            <assign variable="rate" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="code = &quot;J&quot;">
+                                <then>
+                                    <assign variable="rate" expression="50"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sandr"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-04-01 02:44:13 PM"/>
+        <attribute name="created" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMDE7MDI6MjA6MjggUE07MjkyNg=="/>
+        <attribute name="edited" value="c2FuZHI7REVTS1RPUC1SOVVJU1VKOzIwMjEtMDQtMDE7MDI6NDQ6MTMgUE07NjszMDM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="player" type="String" array="False" size=""/>
+            <declare name="hits" type="Real" array="False" size=""/>
+            <declare name="turns" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="battingave" type="Real" array="False" size=""/>
+            <declare name="percent" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter players name: &quot;" newline="True"/>
+            <input variable="player"/>
+            <output expression="&quot;Enter number of hits: &quot;" newline="True"/>
+            <input variable="hits"/>
+            <output expression="&quot;Enter times at bat: &quot;" newline="True"/>
+            <input variable="turns"/>
+            <call expression="battingave (hits, turns)"/>
+            <assign variable="average" expression="battingave (hits, turns)"/>
+            <assign variable="percent" expression="average * 100"/>
+            <output expression="&quot;Players name: &quot; &amp; player" newline="True"/>
+            <output expression="&quot;Batting average:&amp; &quot; &amp; percent" newline="True"/>
+        </body>
+    </function>
+    <function name="battingave" type="Real" variable="battingave">
+        <parameters>
+            <parameter name="hits" type="Real" array="False"/>
+            <parameter name="turns" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="percent" type="Real" array="False" size=""/>
+            <declare name="battingave" type="Real" array="False" size=""/>
+            <assign variable="battingave" expression="hits / turns"/>
+            <assign variable="percent" expression="battingave * 100"/>
+        </body>
+    </function>
+</flowgorithm>
