@@ -1,0 +1,12 @@
+def printarray(arr):
+  print ("List of last names:", arr)
+
+def printreverse(arr):
+  arr.reverse()
+  print ("Reversed list of names:", arr)
+
+
+arr = ['Haro','Stilling','Garcia','Alvarez','Hernandez','Martinez','Smith','Adams','Dawson','Jones']
+
+printarray(arr)
+printreverse(arr)
