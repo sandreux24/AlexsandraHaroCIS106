@@ -1,0 +1,67 @@
+def d11 (mylist):
+  n = int(input("Number of items from your list")) 
+  for n in range(0,n,1):
+    s = int(input("Enter an integer"))
+    mylist.append(s)
+  return mylist 
+def displaylist(mylist):
+  for item in mylist:
+    print (item) 
+
+#main
+mylist = []  #defining an  empty list
+mylist = d11(mylist) 
+displaylist(mylist)      #display each item in the list 
+print(mylist) #horizontal 
+
+#DL2
+mylist.insert(0,99)
+print(mylist) 
+
+#DL3
+mylist[0] = 100 
+print(mylist) 
+
+#DL4
+mylist2 = ["500", "600", "700", "800", "900"]
+mylist3 = ["A", "B", "C", "A", "A","C"]
+mylist2.extend(mylist3)
+print(mylist2) 
+
+#DL5
+mylist2.remove("800")
+print(mylist2) 
+
+#P Deletes the first term and shows new set
+mylist2.pop(0)
+print(mylist2)
+#DL6&7 is more the same
+
+#DL8
+print("Count of As in the list", mylist2.count("A"))
+print("Position of first B", mylist2.index("B"))
+
+#P10 checking for F
+has_F = "F" in mylist2
+print(has_F) 
+
+#P11 clear 2nd list of integers
+mylist3.clear() 
+print(mylist3)
+
+#P12 delete 2nd list
+del mylist2
+
+#P13 making a new list 
+players = ["Rizzo", "Davis", "Baez", "Happ","Bryan"]
+
+#P14 sort players
+players.sort()
+print(players) 
+
+#P15 make a copy of the list, called players2
+players2 = players.copy()
+
+#P16 reversing order 
+players2.reverse()
+print(players2) 
