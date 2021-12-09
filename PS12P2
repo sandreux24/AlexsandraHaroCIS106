@@ -1,0 +1,21 @@
+#class student:
+class Student:
+    def __init__(self,first_name, last_name, district_code, enrolled_credits):
+        self.first= first_name
+        self.last= last_name
+        self.district= district_code
+        self.enrolled= enrolled_credits
+        pass 
+    def tution_owed(self):
+        if self.district=="I":
+            tut= float(self.enrolled) * float(250.00) 
+        else:
+            tut= float(self.enrolled) * float(500.00)  
+        return tut 
+
+
+s1 = Student("Alex","Haro","O",8)
+
+print("First Name is:",s1.self.first)
+print("Last Name is:",s1.self.last)
+print("The tution owned is:", s1.tution_owed())
