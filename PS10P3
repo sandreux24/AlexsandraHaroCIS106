@@ -1,0 +1,60 @@
+
+def printarray(arr, score):
+  print ("List of last names and score:")
+  print(arr[1], score[1])
+  print(arr[2], score[2])
+  print(arr[3], score[3])
+  print(arr[4], score[4])
+  print(arr[5], score[5])
+  print(arr[6], score[6])
+  print(arr[7], score[7])
+  print(arr[8], score[8])
+  print(arr[9], score[9])
+  print(arr[10], score[10])
+
+def printreverse(arr, score):
+ arr.reverse()
+ score.reverse()
+ print("Reversed list of last names and scores:")
+ print(arr[1], score[1])
+ print(arr[2], score[2])
+ print(arr[3], score[3])
+ print(arr[4], score[4])
+ print(arr[5], score[5])
+ print(arr[6], score[6])
+ print(arr[7], score[7])
+ print(arr[8], score[8])
+ print(arr[9], score[9])
+ print(arr[10], score[10])
+
+
+def highscore(arr, score):
+  highscore = max(score)
+  bestidx = score.index(highscore)
+  highscorename = arr[bestidx]
+  print ("The highest score was", highscore, "by",highscorename)  
+
+def lowestscore (arr, score):
+  lowestscore = min(score)
+  minidx = score.index(lowestscore)
+  lowestname = arr[minidx]
+  print ("The lowest score was",lowestscore, "by", lowestname)
+
+def average (arr, score):
+  total = sum(score)
+  averageidx = score.index(total)
+  averagescore = total/len(score)
+print ("Class average:", averagescore)
+
+arr = ["Jones", "Smith", "Haro", "Martinez", "Stilling", "Adams", "Dawson", "Hernandez", "Garcia", "Alvarez"]
+score = [57,24,87,97,97,80,42,76,75,42]
+
+printarray(arr, score)
+print()
+printreverse(arr, score)
+print() 
+highscore(arr, score) 
+print() 
+lowestscore(arr, score) 
+print() 
+average(arr, score) 
